@@ -1,7 +1,9 @@
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
-        hashe = {}
+        s = {}
         for i in range(len(nums)):
-            if target - nums[i] in hashe:
-                return [hashe[target - nums[i]],i]
-            hashe[nums[i]] = i
+            if target - nums[i] in s :
+                return [s[target - nums[i]],i]
+            s[nums[i]] = i
+
+        
